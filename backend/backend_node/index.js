@@ -14,6 +14,6 @@ LocationsRotes(app)
 
 //Server listen
 app.listen(port, ()=>{
-    console.log(`http://localhost:${port}`);
+    console.log(`http://localhost:${port}/api/stations`);
 })
 
