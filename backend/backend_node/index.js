@@ -3,7 +3,11 @@ const app = express()
 
 const {port}=require("./config/config")
 
-const LocationsRotes = require("./routes/gasStations")
+const LocationsRotes = require("./routes/stations")
+
+// ***Middlewares*** //
+/* Body Parse */
+app.use(express.json())
 
 //Routes
 LocationsRotes(app)
