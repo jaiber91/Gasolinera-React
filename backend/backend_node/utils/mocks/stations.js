@@ -1,6 +1,6 @@
 // https://docs.mapbox.com/api/
 
-const stations=[
+const gasolineras=[
     {
     place_id:"2039",
     name:"ESTACION DE SERVICIO CALAFIA, S.A. DE C.V.",
@@ -53,3 +53,5 @@ const stations=[
 },
 
 ]
+
+module.exports = {gasolineras}

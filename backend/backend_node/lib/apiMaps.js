@@ -1,25 +1,60 @@
 const axios = require("axios")                                                                                           
-const { gasolineras } =require("../utils/mocks/mock")
+const MongoLib = require("../lib/mongodb")
 
-let mapbox = `https://api.mapbox.com/geocoding/v5/mapbox.places/-101.377295,26.975178.json?access_token=pk.eyJ1Ijoiam9oYW5hZyIsImEiOiJja2Z1cXRqY3IxOWtqMnJud2J2NHJieXBzIn0.kS3WT8x5Adzfv45XjLJmnQ`
- 
-const obtenerbicacion = (array)=>{
-    for (let i = 0; i < array.length; i++) {
-        let latitud = gasolineras[i].location.latitud 
-        let longitud = gasolineras[i].location.longitud
+const MongoClass = new MongoLib()
+
+const {gasolineras} =require("../utils/mocks/stations")
+let googleAPI = `https://maps.googleapis.com/maps/api/geocode/json?latlng=19.26505,-99.00661&key=AIzaSyC46Ik1GVENPomcHuvFXXYJQh7l2lxkqSk&location_type=geometric_center` 
+
+
+const collec = "places"      
+ MongoClass.getAll(collec, {})
+    .then(data => {
         
+        const obtenerbicacion = (array, cb)=>{
+            for (let i = 0; i <  1/* array.length */  ; i++) {
+                
+                let _id= array[i]._id
+                let latitud = array[i].location.latitud
+                let longitud = array[i].location.longitud
+                console.log(_id, latitud, longitud);
+
+                
+                
+                /* PETICION DE GEOLOCALIZACION  INICIO*/     
+                /* LONGITUD ES NEGATIVO--- Y LATITUD POSITIVO+++ 19.26505,-99.00661 ${latitud},${longitud}*/        
+                axios.get( `https://maps.googleapis.com/maps/api/geocode/json?latlng=32.47641,-116.9214&key=AIzaSyC46Ik1GVENPomcHuvFXXYJQh7l2lxkqSk`)
+                .then(e=>{
+                        const data=e.data.results[1]
+                        console.log(e);
+                        const estado={
+                            formatted_address: data.formatted_address,
+                            estado:{
+                                long_name:data.address_components[4].long_name,
+                                short_name:data.address_components[4].short_name
+                            },
+                            ciudad:{
+                                long_name:data.address_components[3].long_name,
+                                short_name:data.address_components[3].short_name
+                            },                       
+                        }
+                        MongoClass.updateOne(collec, _id , estado )
+                
+                    })
+                    // .catch(err=>console.log(err));
+                    /* PETICION DE GEOLOCALIZACION  TERMINA*/ 
+                }
+            }
         
-        axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${longitud},${latitud}.json?access_token=pk.eyJ1Ijoiam9oYW5hZyIsImEiOiJja2Z1cXRqY3IxOWtqMnJud2J2NHJieXBzIn0.kS3WT8x5Adzfv45XjLJmnQ`)
-        .then(e=>{
-            const data=e.data
-            console.log(data.features[0].context[1].text)
-            console.log(data.features[0].context[2].short_code)
-            console.log(data.features[0].context)
-            })
-            .catch(err=>console.log(err));
-    }
-}
+        obtenerbicacion(data)
+          
+    })
 
-obtenerbicacion(gasolineras)
 
+
+    
+    // MongoClass.getAll(collec, {})
+    //     .then(e=>{
+//         console.log(e);
+//     })
 
