@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header-menu">
+        <figure class="station-menu">
+            <img src="images/gas-station.png" alt="">
+            <h3>Gasolina MX</h3>
+        </figure>
+        <a class="icon-menu-burguer" href="#"><i class="fas fa-bars" id="burguerButtom"></i></a>
+        <div class="burguer-menu">
+            <ul>
+                <li><a href="#"><span class="home"><i class="fas fa-home"></i></span>Home</a></li>
+                <li><a href="#"><span class="find"><i class="fas fa-map-marker-alt"></i></span>Find Station</a></li>
+                <li><a href="#"><span class="top"><i class="fas fa-hand-holding-usd"></i></span>Top Station</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="background-image-banner">
+            <div class="opacity-banner"></div>
+        </div>
+    </section>
+    <div class="title">
+        <h1>¿Buscas Precios?</h1>
+        <p>Información instantanea y actualizada de las estaciones de combustible del país</p>
+    </div>
+
+    <section class="locagtion-map">
+        <div class="background-location-map">
+            <h1>Encuentra la mas cercana</h1>
+            <div class="location-icon">
+                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="options">
+        <div class="background-options">
+            <h1>Descubre la mejor opción</h1>
+            <div class="frames">
+                <figure class="frame1">
+                    <img src="images/gas-fuel.png" alt="">
+                    <h2>Regular</h2>
+                    <h2>99999</h2>
+                </figure>
+                <figure class="frame2">
+                    <img src="images/gas-fuel.png" alt="">
+                    <h2>Premium</h2>
+                    <h2>99999</h2>
+                </figure>
+                <figure class="frame3">
+                    <img src="images/gas-fuel.png" alt="">
+                    <h2>Diesel</h2>
+                    <h2>99999</h2>
+                </figure> 
+            </div>
+            <div class= "go-container">
+                <button onclick="location.href='https://www.youtube.com/watch?v=GqysCB-EZ6g'">Vamos a ello<i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <div class="background-footer">
+            <figure class="station-menu">
+                <img src="images/gas-station.png" alt="">
+                <h3>Gasolina MX</h3>
+            </figure>
+            <p>©2020</p>
+        </div>
+    </footer>
+     
+    <script>
+      const menu = document.querySelector('.burguer-menu');
+      console.log(menu);
+      const burguerButtom = document.querySelector('#burguerButtom')
+      console.log(burguerButtom);
+
+      burguerButtom.addEventListener('click', hideShow)
+
+     function hideShow(){
+      if(menu.classList.contains('is-active')){
+             menu.classList.remove('is-active');
+        }else{
+             menu.classList.add('is-active');
+         }
+      }
+     </script>
+     <script src="https://kit.fontawesome.com/2ab5844431.js"></script>
+</body>
+</html>
