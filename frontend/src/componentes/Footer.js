@@ -1,18 +1,18 @@
 import React from 'react'
 import "../style/Footer.css"
+import gasStation from '../images/gasStation.png'
 
-//ese fecha es el prop que cree en App.js
 const Footer = () => {
-    return (
-
-        <footer>
-            <div className="footer"><p> 2020 </p></div>
-            <div className="footer_curve"></div>
-        </footer>
-
-
-
+    return(
+        <footer className="footer-container">
+            <div className="background-footer">
+                <figure className="station-menu">
+                    <img src= {gasStation}></img>
+                    <h3>Gasolina MX</h3>
+                </figure>
+                <p>©2020</p>
+            </div>
+        </footer>  
     );
 }
-
 export default Footer;
