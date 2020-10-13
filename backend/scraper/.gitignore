@@ -1,0 +1,5 @@
+# Python cache Files
+__pycache__/*
+debug.log
+# environment
+env/*

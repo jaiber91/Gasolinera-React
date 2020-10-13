@@ -7,13 +7,15 @@ class StationsService {
         this.collection = "stations"
     }
     async getAll({estado}){
-        const query = {}
+        
+        const query = estado ? { "estado.estado.short_name":estado } : {}
         const stations =await this.mongodb.getAll(this.collection, query)
+        console.log(stations);
         return stations           
     };
     async getOne(_id){
         const station  = await this.mongodb.getOne(this.collection, _id )
-        console.log(station);
+
         return station
     }
 }
