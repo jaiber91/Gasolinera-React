@@ -1,5 +1,5 @@
 import React from 'react'
-import "../style/Footer.css"
+import "../style/gas.css"
 import gasStation from '../images/gasStation.png'
 
 const Footer = () => {

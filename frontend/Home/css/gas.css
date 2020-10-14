@@ -42,7 +42,7 @@ body{
     z-index: 3;
     background: rgba(236,67,51,.7);
     top: 80px;
-    left: -55vw;
+    left: -50vw;
     bottom: 0;
     padding: 10px 20px 0px;
     transition: .5s;
@@ -184,6 +184,7 @@ body{
     display: flex;
     justify-content: flex-end;
 }
+
 .frame1{
     width: 248px;
     height: 247px;
@@ -193,7 +194,6 @@ body{
     border-radius: 10px;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
     margin-right: 22px;
-    overflow: hidden;
 }
 
 .frame1 img{
@@ -208,7 +208,7 @@ body{
     font-size: 36px;
     line-height: 43px;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 .frame2{
@@ -220,7 +220,6 @@ body{
     border-radius: 10px;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
     margin-right: 22px;
-    overflow: hidden;
 }
 
 .frame2 img{
@@ -235,7 +234,7 @@ body{
     font-size: 36px;
     line-height: 43px;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 .frame3{
@@ -247,7 +246,6 @@ body{
     border-radius: 10px;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
     margin-right: 120px;
-    overflow: hidden;
 }
 
 .frame3 img{
@@ -262,7 +260,7 @@ body{
     font-size: 36px;
     line-height: 43px;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 .go-container{
@@ -307,105 +305,20 @@ body{
 
 /* .....................................................@media */
 @media screen and (max-width: 1024px) {
-   
-    .go-container button{
-        left: 39%;
-        top: 30px;
-    }
+
 }
 
 @media screen and (max-width: 768px){
-    .background-location-map h1{
-        font-size: 62px;
-    }
-
-    .background-options h1{
-        padding: 56px 100px;
-    }
-
-    .frame3{
-        margin-right: 0px;
-    }
-
-    .go-container button{
-        left: 36%;
-        top: 30px;
-    }
+    
 }
 
 @media screen and (max-width: 480px) {
-    .title{
-        margin-top: -255px;
-        margin-left: 20px;
-    }
-    
-    .title h1{
-        font-size: 38px;
-        text-align: center;
-    }
-    .title p{
-        text-align: center;
-    }
 
-    .background-location-map h1{
-        font-size: 52px;
-        text-align: center;
-    }
-
-    .location-icon{
-        left: 45%;
-    }
-
-    .background-options h1{
-        text-align: center;
-    }
-
-    .background-options{
-         height: 1200px;
-    }
-
-    .frames{
-        flex-direction: column;
-        height: 770px;
-        align-items: center;
-    }
-    
-    .frame2{
-        margin-top: 15px;
-    }
-
-    .frame3{
-        margin-top: 15px;
-        margin-right: 20px;
-    }
-
-    .go-container button{
-        left: 25%;
-        top: 30px;
-    }
-    .background-footer{
-        justify-content: center;
-    }
-    
-    .background-footer p{
-        top: 80%;
-        right: 45%;
-    }
 }
 
 
 @media screen and (max-width: 320px) {
-    .background-options h1{
-        text-align: center;
-        font-size: 35px;
-        padding: 5px;
-    }
 
-    .go-container button{
-        left: 12%;
-        top: 30px;
-    }
-    
 }
 
 
