@@ -20,17 +20,17 @@ const Header = ({ titulo }) => {
   return (
     <header className="header-menu">
       <figure className="station-menu">
-        <img src={gasStation}></img>
+        <img src={gasStation} alt="Logo"></img>
         <h3>Gasolina MX</h3>
       </figure>
-      <a className="icon-menu-burguer" href="#" onClick={hideShow}>
+      <a className="icon-menu-burguer" onClick={hideShow}>
         {" "}
         <FontAwesomeIcon icon={faBars} />
       </a>
       <div className={`burguer-menu ${isVisible ? "is-active" : ""}`}>
         <ul>
           <li>
-            <a href="#">
+            <a>
               <span className="home">
                 <FontAwesomeIcon icon={faHome} />
               </span>
@@ -38,7 +38,7 @@ const Header = ({ titulo }) => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a>
               <span className="find">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </span>
