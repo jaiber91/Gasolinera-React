@@ -5,9 +5,10 @@ import "../style/Footer.css"
 const Footer = () => {
     return (
 
-        <footer>
-            <div className="footer"><p> 2020 </p></div>
+        <footer className="footer">
+            <p> 2020 </p>
             <div className="footer_curve"></div>
+
         </footer>
 
 
