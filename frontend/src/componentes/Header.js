@@ -31,7 +31,7 @@ const Header = ({ titulo }) => {
         <ul>
           <li>
             <a href="#">
-              <span class="home">
+              <span className="home">
                 <FontAwesomeIcon icon={faHome} />
               </span>
               Home
@@ -39,7 +39,7 @@ const Header = ({ titulo }) => {
           </li>
           <li>
             <a href="#">
-              <span class="find">
+              <span className="find">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </span>
               Find Station
@@ -47,7 +47,7 @@ const Header = ({ titulo }) => {
           </li>
           <li>
             <a href="#">
-              <span class="top">
+              <span className="top">
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
               </span>
               Top Station

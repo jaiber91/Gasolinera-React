@@ -8,7 +8,7 @@ import {
 } from "react-google-maps";
 
 function Map() {
-  const [estado, setEstados, setSelectedStation, selectedStation] = useState(
+  const [station, setStation, setSelectedStation, selectedStation] = useState(
     []
   );
   useEffect(() => {
@@ -29,13 +29,13 @@ function Map() {
     const datos = await fetch(
       "https://gasolinerasmexico.herokuapp.com/api/stations"
     );
-    const users = await datos.json();
-    setEstados(users.data);
+    const estados = await datos.json();
+    setStation(estados.data);
   };
 
   return (
     <GoogleMap defaultZoom={5.3} defaultCenter={{ lat: 25.0, lng: -102.0 }}>
-      {estado.map((gasStation) => (
+      {station.map((gasStation) => (
         <Marker
           key={gasStation.id}
           position={{
