@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 import Mapa from "./componentes/map";
+import Producto from "./componentes/Producto";
 function FindStation() {
   return (
     <>
@@ -12,6 +13,7 @@ function FindStation() {
         mapElement={<div style={{ height: "100%" }}></div>}
         loadingElement={<p>Cargando</p>}
       />
+
       <Footer></Footer>
     </>
   );
