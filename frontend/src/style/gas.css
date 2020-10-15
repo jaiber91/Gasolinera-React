@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* .........................................header */
+.header-menu{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background: #EC4333;
+}
+
+.station-menu{
+    padding: 42px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.station-menu h3{
+    margin-left: 9px;
+}
+
+.station-menu img{
+    width: 40px;
+    height: 35px;
+}
+
+.icon-menu-burguer{
+    font-size: 25px;
+    padding: 30px;
+    color: #fff;
+}
+
+.burguer-menu{
+    width: 40vw;
+    position: absolute;
+    z-index: 3;
+    background: rgba(236,67,51,.7);
+    top: 80px;
+    left: -55vw;
+    bottom: 0;
+    padding: 10px 20px 0px;
+    transition: .5s;
+}
+
+.burguer-menu.is-active{
+    left:0;
+}
+
+.burguer-menu ul li a{
+    color:#fff;
+	display:block;
+    text-decoration:none;
+    padding: 20px;
+    font-size: 25px ;
+}
+
+.burguer-menu ul li{
+    list-style: none;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+}
+
+.burguer-menu ul li span{
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.burguer-menu ul li a:hover {
+    background:#EC4333;
+    transition: .5s;
+}
+
+/* .......................................banner */
+
+.banner{
+    max-width: 100%;
+    position: relative;
+}
+
+
+.background-image-banner{
+    width: 100%;
+    height: 620px;
+    background-image: url(../images/station.jpg);
+    background-size: cover;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.opacity-banner{
+    width: 100%;
+    height: 620px;
+    background: #000000;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.title{
+    margin-top: -183px;
+    margin-left: 80px;
+    color: #fff;
+    position: absolute;
+}
+
+.title h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+}
+.title p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 15px; 
+}
+
+/* ..............................map */
+
+.location-map{
+    max-width: 100%;
+}
+
+.background-location-map{
+    width: 100%;
+    height: 500px;
+    background: url(../images/map.png);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.background-location-map h1{
+    margin-top: 5%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    color: #EC4333;
+
+}
+
+.location-icon{
+    font-size: 85px;
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+}
+
+.location-icon a{
+    color: #EC4333;
+}
+
+/* ..................................option */
+
+.options{
+    max-width: 100%;
+}
+
+.background-options{
+    width: 100%;
+    height: 552px;
+    background: rgba(55, 53, 53, 0.6);
+}
+
+.background-options h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 56px 70px;
+}
+
+.frames{
+    width: 100%;
+    height: 248px;
+    display: flex;
+    justify-content: flex-end;
+}
+.frame1{
+    width: 248px;
+    height: 247px;
+    background: #C4C4C4;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+    margin-right: 22px;
+    overflow: hidden;
+}
+
+.frame1 img{
+    width: 76px;
+    height: 76px;
+    margin: 30px 0px 10px;    
+}
+
+.frame1 h2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 15px 0px;
+}
+
+.frame2{
+    width: 248px;
+    height: 247px;
+    background: #C4C4C4;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+    margin-right: 22px;
+    overflow: hidden;
+}
+
+.frame2 img{
+    width: 76px;
+    height: 76px;
+    margin: 30px 0px 10px;    
+}
+
+.frame2 h2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 15px 0px;
+}
+
+.frame3{
+    width: 248px;
+    height: 247px;
+    background: #C4C4C4;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+    margin-right: 120px;
+    overflow: hidden;
+}
+
+.frame3 img{
+    width: 76px;
+    height: 76px;
+    margin: 30px 0px 10px;    
+}
+
+.frame3 h2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 15px 0px;
+}
+
+.go-container{
+    position: relative;
+}
+
+.go-container button{
+    font-size: 30px;
+    background: #EC4333;
+    color: #fff;
+    border-radius: 10px;
+    width: 218px;
+    height: 68px;
+    position: absolute;
+    left: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+/* ...................................foter */
+.footer-container{
+    max-width: 100%;
+}
+
+.background-footer{
+    width: 100%;
+    height: 145px;
+    background: #EC4333;
+    border-top-left-radius: 180px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.background-footer p{
+    position: absolute;
+    top: 80%;
+    right: 50%;
+    color: #fff;
+}
+
+/* .....................................................@media */
+@media screen and (max-width: 1024px) {
+   
+    .go-container button{
+        left: 39%;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .background-location-map h1{
+        font-size: 62px;
+    }
+
+    .background-options h1{
+        padding: 56px 100px;
+    }
+
+    .frame3{
+        margin-right: 0px;
+    }
+
+    .go-container button{
+        left: 36%;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title{
+        margin-top: -255px;
+        margin-left: 20px;
+    }
+    
+    .title h1{
+        font-size: 38px;
+        text-align: center;
+    }
+    .title p{
+        text-align: center;
+    }
+
+    .background-location-map h1{
+        font-size: 52px;
+        text-align: center;
+    }
+
+    .location-icon{
+        left: 45%;
+    }
+
+    .background-options h1{
+        text-align: center;
+    }
+
+    .background-options{
+         height: 1200px;
+    }
+
+    .frames{
+        flex-direction: column;
+        height: 770px;
+        align-items: center;
+    }
+    
+    .frame2{
+        margin-top: 15px;
+    }
+
+    .frame3{
+        margin-top: 15px;
+        margin-right: 20px;
+    }
+
+    .go-container button{
+        left: 25%;
+        top: 30px;
+    }
+    .background-footer{
+        justify-content: center;
+    }
+    
+    .background-footer p{
+        top: 80%;
+        right: 45%;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .background-options h1{
+        text-align: center;
+        font-size: 35px;
+        padding: 5px;
+    }
+
+    .go-container button{
+        left: 12%;
+        top: 30px;
+    }
+    
+}
+
+
+
+
+

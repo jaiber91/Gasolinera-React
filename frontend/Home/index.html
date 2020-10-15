@@ -10,7 +10,7 @@
 <body>
     <header class="header-menu">
         <figure class="station-menu">
-            <img src="images/gas-station.png" alt="">
+            <img src="images/gasStation.png" alt="">
             <h3>Gasolina MX</h3>
         </figure>
         <a class="icon-menu-burguer" href="#"><i class="fas fa-bars" id="burguerButtom"></i></a>
@@ -47,17 +47,16 @@
             <h1>Descubre la mejor opción</h1>
             <div class="frames">
                 <figure class="frame1">
-                    <img src="images/gas-fuel.png" alt="">
-                    <h2>Regular</h2>
-                    <h2>99999</h2>
+                    <img src="images/gasFuel.png" alt="">
+                    <h2 id="poke"></h2>
                 </figure>
                 <figure class="frame2">
-                    <img src="images/gas-fuel.png" alt="">
+                    <img src="images/gasFuel.png" alt="">
                     <h2>Premium</h2>
                     <h2>99999</h2>
                 </figure>
                 <figure class="frame3">
-                    <img src="images/gas-fuel.png" alt="">
+                    <img src="images/gasFuel.png" alt="">
                     <h2>Diesel</h2>
                     <h2>99999</h2>
                 </figure> 
@@ -68,16 +67,7 @@
         </div>
     </section>
 
-    <footer class="footer-container">
-        <div class="background-footer">
-            <figure class="station-menu">
-                <img src="images/gas-station.png" alt="">
-                <h3>Gasolina MX</h3>
-            </figure>
-            <p>©2020</p>
-        </div>
-    </footer>
-     
+   
     <script>
       const menu = document.querySelector('.burguer-menu');
       console.log(menu);
@@ -93,6 +83,16 @@
              menu.classList.add('is-active');
          }
       }
+
+
+    fetch('https://gasolinerasmexico.herokuapp.com/api/stations')
+    .then(response => response.json())
+    .then(gas => {
+
+        let element = document.getElementById('poke')
+        element.innerHTML = 
+        `<h2>${gas.data}</h2>`
+    })
      </script>
      <script src="https://kit.fontawesome.com/2ab5844431.js"></script>
 </body>
