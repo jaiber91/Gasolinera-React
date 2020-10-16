@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Fragment } from 'react';
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
@@ -22,7 +23,14 @@ function App() {
             console.log(data);
         })
         .catch(err => console.log(err))
+=======
+import React, { Fragment } from "react";
+import Header from "./componentes/Header"
+import Main from "./componentes/Main"
+import Footer from "./componentes/Footer"
+>>>>>>> b272de861c90e26785dae1a0dc8064e9b40fcf8e
 
+const TopStation = () => {
 
     return (
         <Fragment>
@@ -34,7 +42,9 @@ function App() {
                 Regular="Regular"
                 Premium="Premium"
                 Diesel="Diesel"
+
             />
+
 
             <Footer />
 
@@ -43,4 +53,4 @@ function App() {
     );
 }
 
-export default App;
+export default TopStation;
