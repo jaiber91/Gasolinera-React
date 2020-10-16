@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Rute from './componentes/Rute';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Rute />
   </React.StrictMode>,
   document.getElementById('root')
 );

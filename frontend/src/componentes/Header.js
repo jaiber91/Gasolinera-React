@@ -9,6 +9,7 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Header = ({ titulo }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,20 +31,21 @@ const Header = ({ titulo }) => {
       <div className={`burguer-menu ${isVisible ? "is-active" : ""}`}>
         <ul>
           <li>
-            <a href="#">
-              <span className="home">
+              <Link to="/">
+               <span className="home">
                 <FontAwesomeIcon icon={faHome} />
               </span>
               Home
-            </a>
+              </Link>
           </li>
           <li>
-            <a href="#">
-              <span className="find">
+            <Link to="/FindStation">
+            <span className="find">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
-              </span>
-              Find Station
-            </a>
+            </span>
+                Find Station
+            </Link>
+              
           </li>
           <li>
             <a href="#">

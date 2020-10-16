@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 //import Producto from "./componentes/Producto";
-import Main from "./componentes/Main";
+import Main from "../componentes/Main";
 
 //el fragment remplaza el Div, y esto evita que tengamos divs vacios y sin ninguna función
 
