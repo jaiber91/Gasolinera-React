@@ -9,7 +9,7 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Header = ({ titulo }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,12 +20,12 @@ const Header = ({ titulo }) => {
 
   return (
     <header className="header-menu">
-        <Link to="/"className="station-menu">  
+      <Link to="/" className="station-menu">
         <figure className="station-menu">
-          <img src={gasStation}></img>
-          <h3>Gasolina MX</h3>        
+          <img src={gasStation} alt="ico"></img>
+          <h3>Gasolina MX</h3>
         </figure>
-        </Link>
+      </Link>
       <a className="icon-menu-burguer" href="#" onClick={hideShow}>
         {" "}
         <FontAwesomeIcon icon={faBars} />
@@ -33,30 +33,28 @@ const Header = ({ titulo }) => {
       <div className={`burguer-menu ${isVisible ? "is-active" : ""}`}>
         <ul>
           <li>
-              <Link to="/">
-               <span className="home">
+            <Link to="/">
+              <span className="home">
                 <FontAwesomeIcon icon={faHome} />
               </span>
               Home
-              </Link>
+            </Link>
           </li>
           <li>
             <Link to="/FindStation">
-            <span className="find">
+              <span className="find">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
-            </span>
-                Find Station
+              </span>
+              Find Station
             </Link>
-              
           </li>
           <li>
             <Link to="/topStation">
-            <span className="top">
+              <span className="top">
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
               </span>
               Top Station
             </Link>
-              
           </li>
         </ul>
       </div>
