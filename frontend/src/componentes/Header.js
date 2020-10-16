@@ -20,37 +20,29 @@ const Header = ({ titulo }) => {
 
   return (
     <header className="header-menu">
-      <figure className="station-menu">
-        <img src={gasStation} alt="Logo"></img>
-        <h3>Gasolina MX</h3>
-      </figure>
-      <a className="icon-menu-burguer" onClick={hideShow}>
+        <Link to="/"className="station-menu">  
+        <figure className="station-menu">
+          <img src={gasStation}></img>
+          <h3>Gasolina MX</h3>        
+        </figure>
+        </Link>
+      <a className="icon-menu-burguer" href="#" onClick={hideShow}>
         {" "}
         <FontAwesomeIcon icon={faBars} />
       </a>
       <div className={`burguer-menu ${isVisible ? "is-active" : ""}`}>
         <ul>
           <li>
-<<<<<<< HEAD
               <Link to="/">
                <span className="home">
-=======
-            <a>
-              <span className="home">
->>>>>>> b272de861c90e26785dae1a0dc8064e9b40fcf8e
                 <FontAwesomeIcon icon={faHome} />
               </span>
               Home
               </Link>
           </li>
           <li>
-<<<<<<< HEAD
             <Link to="/FindStation">
             <span className="find">
-=======
-            <a>
-              <span className="find">
->>>>>>> b272de861c90e26785dae1a0dc8064e9b40fcf8e
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
             </span>
                 Find Station
@@ -58,12 +50,13 @@ const Header = ({ titulo }) => {
               
           </li>
           <li>
-            <a href="#">
-              <span className="top">
+            <Link to="/topStation">
+            <span className="top">
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
               </span>
               Top Station
-            </a>
+            </Link>
+              
           </li>
         </ul>
       </div>

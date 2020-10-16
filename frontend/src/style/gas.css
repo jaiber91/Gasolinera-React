@@ -15,10 +15,12 @@ body{
 }
 
 .station-menu{
-    padding: 42px;
+    padding: 22px;
     display: flex;
     align-items: center;
     color: #fff;
+    text-decoration: none;
+
 }
 
 .station-menu h3{

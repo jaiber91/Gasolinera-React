@@ -6,6 +6,7 @@ import {
   faAngleRight,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Producto = ({ product }) => {
   const [equipo, setEquipo] = React.useState([]);
@@ -28,10 +29,9 @@ const Producto = ({ product }) => {
         <div className="background-location-map">
           <h1>Encuentra la mas cercana</h1>
           <div className="location-icon">
-            <a>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
-              <i className="fas fa-map-marker-alt"></i>
-            </a>
+            <Link to="/FindStation">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+            </Link>
           </div>
         </div>
       </section>
@@ -69,10 +69,12 @@ const Producto = ({ product }) => {
             </figure>
           </div>
           <div className="go-container">
+           <Link to="/topStation">
             <button>
-              Vamos a ello
-              <FontAwesomeIcon icon={faAngleRight} />
+                Vamos a ello
+                <FontAwesomeIcon icon={faAngleRight} />
             </button>
+           </Link>
           </div>
         </div>
       </section>
