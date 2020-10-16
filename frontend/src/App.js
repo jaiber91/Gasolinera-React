@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "./componentes/Footer";
-import Baner from "./componentes/Baner";
-import Producto from "./componentes/Producto";
+import Footer from "./components/Footer";
+import Baner from "./components/Baner";
+import Producto from "./components/Producto";
 function App() {
   return (
     <>

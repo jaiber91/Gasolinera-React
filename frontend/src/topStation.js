@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import Main from "./componentes/Main";
-import Footer from "./componentes/Footer";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 const TopStation = () => {
   return (
