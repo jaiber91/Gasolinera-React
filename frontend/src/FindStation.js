@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./componentes/Footer";
-import Mapa from "./componentes/mapa";
+import Mapa from "./componentes/Mapa";
 function FindStation() {
   return (
     <>
